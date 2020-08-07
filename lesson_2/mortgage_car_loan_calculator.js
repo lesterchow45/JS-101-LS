@@ -29,14 +29,14 @@ while (true) {
   prompt('What is the loan amount?');
   let loanAmount = readline.question();
   while (askAgain(loanAmount)) {
-    prompt('=> That is not a number or is < 0');
+    prompt('That is not a number or is < 0');
     loanAmount = readline.question();
   }
 
   prompt('What is the apr? Enter a number ie. 5.3 = 5.3%');
   let apr = readline.question();
   while (askAgain(apr)) {
-    prompt('=> That is not a number or is < 0');
+    prompt('That is not a number or is < 0');
     apr = readline.question();
   }
   apr = parseFloat(apr) / 100;
