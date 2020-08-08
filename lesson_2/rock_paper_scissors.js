@@ -15,13 +15,13 @@ function rps(userInput, computerChoice) {
             (userInput === 'scissors' && computerChoice === 'paper')) {
     prompt("You win!");
   } else {
-    prompt("Computer wins!")
+    prompt("Computer wins!");
   }
 }
 
 while (true) {
   prompt('Choose Rock, Paper, or Scissors');
-  let userInput = readline.question()
+  let userInput = readline.question();
   while (!CHOICES.includes(userInput.toLowerCase())) {
     prompt('Please select Rock, Paper, or Scissors');
     userInput = readline.question();
@@ -36,7 +36,7 @@ while (true) {
   let playAgain = readline.question().toLowerCase();
   while (playAgain[0] !== 'n' && playAgain[0] !== 'y') {
     prompt('Please enter y/n');
-    let playAgain = readline.question();
+    playAgain = readline.question().toLowerCase();
   }
   if (playAgain[0] !== 'y') {
     break;
