@@ -35,11 +35,12 @@ const NUM_WORDS = {
 
 function wordToDigit(sentence) {
   Object.keys(NUM_WORDS).forEach(word => {
-    let regex = new RegExp(word, 'g');
+    let regex = new RegExp('\\b' + word + '\\b', 'g');
     sentence = sentence.replace(regex, NUM_WORDS[word]);
   });
 
   return sentence;
 }
 
-console.log(wordToDigit('Please call me at five five five one two three four. Thanks.'));
+console.log(wordToDigit('Please call me at five five five done two three four. Thanks.'));
+
